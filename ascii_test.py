@@ -11,7 +11,7 @@ root.geometry(f"{window_width}x{window_height}")
 
 ASCII_CHARS = "@%#*+=-:. &?<>\{[]}"
 
-ascii_label = tk.Label(root, font=("Courier New", 8))
+ascii_label = tk.Label(root, font=("Courier New", 6))
 ascii_label.pack()
 
 cap = None
@@ -19,8 +19,7 @@ paused = False
 
 def frame_to_ascii(frame, width=100):
     frame = cv2.cvtColor(frame, cv2.COLOR_BGRA2GRAY)
-    frame = cv2.resize(frame, (width, int(frame.shape[0] * (width / frame.shape[1])))
-    )
+    frame = cv2.resize(frame, (width, int(frame.shape[0] * (width / frame.shape[1]))))
     ascii_frame = ''
     for row in frame:
         for pixel_value in row:
