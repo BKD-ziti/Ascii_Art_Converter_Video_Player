@@ -42,7 +42,7 @@ def frame_to_ascii(frame, width=100, line_width=50):
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     # Resize the frame to half of its original size while keeping the aspect ratio
     aspect_ratio = frame.shape[1] / frame.shape[0]
-    new_width = int(width * .5)
+    new_width = int(width * .66)
     new_height = int(new_width / aspect_ratio)
     frame = cv2.resize(frame, (new_width, new_height))
     ascii_frame = ''
