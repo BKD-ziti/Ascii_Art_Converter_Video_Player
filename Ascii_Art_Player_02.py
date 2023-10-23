@@ -2,8 +2,8 @@ import cv2
 import tkinter as tk
 from tkinter import filedialog
 
-window_width = 800
-window_height = 800
+window_width = 1080
+window_height = 720
 
 root = tk.Tk()
 root.title("ASCII Video Player")
@@ -66,7 +66,7 @@ def frame_to_ascii(frame, width=100, line_width=50):
     return '\n'.join(lines)
 
 # Create a Tkinter label to display the ASCII art
-ascii_label = tk.Label(root, font=("Courier", 6))
+ascii_label = tk.Label(root, font=("Courier", 10))
 ascii_label.pack()
 
 def stop_video():
