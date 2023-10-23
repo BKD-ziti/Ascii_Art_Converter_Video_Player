@@ -66,7 +66,7 @@ def frame_to_ascii(frame, width=100, line_width=50):
     return '\n'.join(lines)
 
 # Create a Tkinter label to display the ASCII art
-ascii_label = tk.Label(root, font=("Courier", 6))
+ascii_label = tk.Label(root, font=("Courier", 8))
 ascii_label.pack()
 
 def stop_video():
