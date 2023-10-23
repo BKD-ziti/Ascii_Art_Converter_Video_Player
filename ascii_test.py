@@ -2,8 +2,8 @@ import cv2
 import tkinter as tk
 from tkinter import filedialog
 
-window_width = 800
-window_height = 600
+window_width = 720
+window_height = 480
 
 root = tk.Tk()
 root.title("ASCII Video Player")

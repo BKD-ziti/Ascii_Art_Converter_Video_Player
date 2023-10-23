@@ -2,13 +2,20 @@ import cv2
 import tkinter as tk
 from tkinter import filedialog
 
-window_width = 1080
-window_height = 720
+window_width = 720
+window_height = 480
 
 root = tk.Tk()
 root.title("ASCII Video Player")
+root.geometry(f"{window_width}x{window_height}")
 
 ASCII_CHARS = "@%#*+=-:. &?<>\{[]}"
+
+ascii_label = tk.Label(root, font=("Courier New", 6))
+ascii_label.pack()
+
+cap = None
+paused = False
 
 # Initialize variables inside the function where cap is defined
 cap = None
